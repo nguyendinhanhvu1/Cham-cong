@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Styles/Style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrap">
+        <div id="header">
+            <div id="divbanner">
+                <asp:Image ID="banner" runat="server" 
+                    ImageUrl="~/Images/banner.jpg" />
+            </div>
+            <div style="padding:0 10 0 0; text-align : center">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        </div>
+        <div id="divcontent">
+            
+            <div id="leftcontent">
+            
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="rightcontent">
+            <div id="cont">
+                <asp:Image ID="contact" runat="server" Height="140px" 
+                    ImageUrl="~/Images/upload.png" Width="140px" />
+            </div>
+            <div id="divsl">
+                    <asp:Label ID="LabelStatus" runat="server" Text="Số lượt truy cập : "></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                </div>
+             </div>
+        </div>
+        <div id="divfooter">
+            <p>Mega Company</p>
+            <p>Powered by Poke251</p>
+            <p>Copyright © 2012</p>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
